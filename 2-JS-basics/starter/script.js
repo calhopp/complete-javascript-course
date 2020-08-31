@@ -143,7 +143,7 @@ if (johnBMIHigher) {
 /**
  * Coding Challenge 2
  */
-var johnScore1 = 130;
+/**var johnScore1 = 130;
 var johnScore2 = 120;
 var johnScore3 = 103;
 
@@ -163,7 +163,107 @@ if (johnAvg > mikeAvg && johnAvg > maryAvg) {
     console.log("John's team has the highest average, with " + johnAvg + " points!");
 } else if (mikeAvg > johnAvg && mikeAvg > maryAvg) {
     console.log("Mike's team has the highest average, with " + mikeAvg + " points!")
-} else {
+} else if (maryAvg > mikeAvg && maryAvg > johnAvg) {
     console.log("Mary's team has the highest average, with " + maryAvg + " points!");
+} else {
+    console.log("There was a draw at " + johnAvg + " points");
+}*/
 
+/**
+ * Functions
+ */
+
+/**function calculateAge(birthYear) {
+    return 2020 - birthYear;
 }
+
+var ageJohn = calculateAge(1990);
+var ageMike = calculateAge(1948);
+var ageJane = calculateAge(1969);
+
+console.log(ageJohn,ageMike,ageJane);
+
+function yearsUntilRetirement(year, firstName) {
+    var age = calculateAge(year);
+    var retirement = 65 - age;
+    if (retirement > 0){
+        console.log(firstName + " retires in " + retirement + " years.");
+    } else {
+        console.log(firstName + " is already retired.")
+    }
+}
+
+yearsUntilRetirement(1990, "John");
+yearsUntilRetirement(1948, "Mike");
+yearsUntilRetirement(1969, "Jane");*/
+/**
+ * Function statements and expressions
+ */
+
+/**var whatDoYouDo = function (job, firstName) {
+    switch(job) {
+        case 'teacher':
+            return firstName + ' teaches kids how to code';
+        case 'driver':
+            return firstName + ' drives an Uber';
+        case 'designer':
+            return firstName + ' designs beautiful websites';
+        default:
+            return firstName + ' does something else';
+    }
+}
+
+console.log(whatDoYouDo('farmer', 'John'));*/
+
+/**
+ * Arrays
+ */
+
+/**var names = ["John","Mark","Jane"];
+var years = new Array(1990,1969,1948);
+console.log(names,years[2]);
+ 
+
+names[1] = "Ben";
+names[5] = "Mary";
+console.log(names);
+
+for(var i = 0; i < 10; i++) {
+    names[names.length] = (''+i) * i;
+}*/
+
+/**
+ * Coding Challenge 3
+ */
+
+var bills = [124, 48, 268];
+var tips = [];
+var totals = [];
+
+var calculateTip = function(bill) {
+    if (bill < 50) {
+        return bill * 0.2;
+    } else if (bill < 200) {
+        return bill * 0.15;
+    } else {
+        return bill * 0.1;
+    }
+}
+
+/**for(var i = 0; i<bills.length;i++) {
+    tips[i] = calculateTip(bills[i]);
+    totals[i] = bills[i] + tips[i];
+}*/
+
+tips[0] = calculateTip(bills[0]);
+tips[1] = calculateTip(bills[1]);
+tips[2] = calculateTip(bills[2]);
+
+totals[0] = bills[0] + tips[0];
+totals[1] = bills[1] + tips[1];
+totals[2] = bills[2] + tips[2];
+
+
+console.log("Bills:",bills);
+console.log("Tips:",tips);
+console.log("Totals:",totals);
