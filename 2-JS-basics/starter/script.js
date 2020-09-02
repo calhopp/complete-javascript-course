@@ -236,7 +236,7 @@ for(var i = 0; i < 10; i++) {
  * Coding Challenge 3
  */
 
-var bills = [124, 48, 268];
+/**var bills = [124, 48, 268];
 var tips = [];
 var totals = [];
 
@@ -250,10 +250,10 @@ var calculateTip = function(bill) {
     }
 }
 
-/**for(var i = 0; i<bills.length;i++) {
-    tips[i] = calculateTip(bills[i]);
-    totals[i] = bills[i] + tips[i];
-}*/
+//for(var i = 0; i<bills.length;i++) {
+//    tips[i] = calculateTip(bills[i]);
+//    totals[i] = bills[i] + tips[i];
+//}
 
 tips[0] = calculateTip(bills[0]);
 tips[1] = calculateTip(bills[1]);
@@ -266,4 +266,120 @@ totals[2] = bills[2] + tips[2];
 
 console.log("Bills:",bills);
 console.log("Tips:",tips);
-console.log("Totals:",totals);
+console.log("Totals:",totals);*/
+
+/**
+ * Objects and Properties
+ */
+
+/**var john = {
+    firstname: ' John',
+    lastName: 'Smith',
+    birthyear: 1990,
+    family: ['Jane','Mark','Bob','Emily'],
+    job: 'teacher',
+    isMarried: false
+};
+
+var mark = john;
+mark.firstname = 'Mark';
+console.log(john.firstname, mark.firstname)*/
+
+/**
+ * Coding Challenge 4
+ */
+
+/**var john = {
+    fullName: "John Smith",
+    mass: 70,
+    height: 2,
+    calculateBmi: function() {
+        return this.bmi = this.mass / (this.height * this.height);
+    }
+}
+
+var mark = {
+    fullName: "Mark Smith",
+    mass: 78,
+    height: 2.2,
+    calculateBmi: function() {
+       return this.bmi = this.mass / (this.height * this.height);
+    }
+}
+console.log("John has a BMI of " + john.calculateBmi());
+console.log("Mark has a BMI of " + mark.calculateBmi());
+if (john.bmi > mark.bmi) {
+    console.log(`${john.fullName} has the highest BMI, at ${john.bmi}`);
+} else if (john.bmi < mark.bmi) {
+    console.log(mark.fullName + " has the highest BMI, at " + mark.bmi);
+} else {
+    console.log(john.fullName + " and " + mark.fullName + " have the same BMI, at " + john.bmi);
+}
+*/
+/**
+ * Coding Challenge 5
+ */
+/**var bills = [124, 48, 268, 180, 42];
+var tips = [];
+var totals = [];
+
+var calculateTipJohn = function(bills, tips, totals) {
+    for (var i = 0; i<bills.length; i++) {
+        if (bills[i] < 50) {
+            tips[i] = bills[i] * 0.2;
+        } else if (bills[i] < 200) {
+            tips[i] = bills[i] * 0.15;
+        } else {
+            tips[i] = bills[i] * 0.1;
+        }
+        totals[i] = bills[i] + tips[i];
+    }
+}
+
+calculateTipJohn(bills,tips,totals);
+
+console.log("John's Bills:",bills);
+console.log("John's Tips:",tips);
+console.log("John's Totals:",totals);
+var johnTipsAvg = 0;
+for (var i = 0; i < tips.length; i++) {
+    johnTipsAvg += tips[i];
+}
+johnTipsAvg /= tips.length;
+console.log("John's Average Tip:",johnTipsAvg);
+
+var billsMark = [77, 375, 110, 45];
+var tipsMark = [];
+var totalsMark = [];
+
+var calculateTipMark = function(bills, tips, totals) {
+    for (var i = 0; i<bills.length; i++) {
+        if (bills[i] < 100) {
+            tips[i] = bills[i] * 0.2;
+        } else if (bills[i] < 300) {
+            tips[i] = bills[i] * 0.10;
+        } else {
+            tips[i] = bills[i] * 0.25;
+        }
+        totals[i] = bills[i] + tips[i];
+    }
+}
+
+calculateTipMark(billsMark, tipsMark, totalsMark);
+
+console.log("Mark's Bills:",billsMark);
+console.log("Mark's Tips:",tipsMark);
+console.log("Mark's Totals:",totalsMark);
+var markTipsAvg = 0;
+for (var i = 0; i < tipsMark.length; i++) {
+    markTipsAvg += tipsMark[i];
+}
+markTipsAvg /= tipsMark.length;
+console.log("Mark's Average Tip:",markTipsAvg);
+if (johnTipsAvg > markTipsAvg) {
+    console.log("John's average tip is higher");
+} else {
+    console.log("Mark's average tip is higher");
+}*/
+
+
